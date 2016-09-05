@@ -1,9 +1,12 @@
 
 #cal_holder{
   margin: auto;
-  width: 710px;
+  width: 350px;
 }
-
+#player_card_holder{
+  margin: auto;
+  width: 550px;
+}
 #daybox {
   display: inline-block;
   background-color: rgb(230, 230, 230);

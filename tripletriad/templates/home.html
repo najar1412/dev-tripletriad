@@ -1,97 +1,96 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- site css -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
 
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
-
-  <script>
-  function allowDrop(ev) {
-      ev.preventDefault();
-  }
-
-  function drag(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-  }
-
-  function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-  }
-  </script>
-
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
 </head>
 <body>
 
-<br>
-<div id="cal_holder">
+    <br>
+    <div id="cal_holder">
 
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div><br>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div><br>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-</div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <br>
+    <br>
 
-</div><br>
-<br>
+    </div>
 
-</div>
+    <div id="player_card_holder">
 
-<div id="player_card_holder">
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag1">
+    </div>
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag2">
+    </div>
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag3">
+    </div>
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag4">
+    </div>
+    <div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag5">
+    </div>
 
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag1"></div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag2"></div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag3"></div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag4"></div>
-<div id="daybox" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="{{ url_for('static', filename='placeholder_.jpg') }}" draggable="true" ondragstart="drag(event)" id="drag5"></div>
-
-</div>
+    </div>
 
 
-<br>
+    <br>
 
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-</div>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
 
-<form method="post" action="{{ url_for('update') }}">
-</form>
+    <form method="post" action="{{ url_for('update') }}">
+    </form>
 
 
 </body>
